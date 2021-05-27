@@ -123,6 +123,11 @@ void sfImage_destroy(sfImage* image)
     delete image;
 }
 
+CSFML_GRAPHICS_API sfBool sfImage_loadFromFile(sfImage * image, const char * filename)
+{
+	CSFML_CALL_RETURN(image, loadFromFile(filename), sfFalse);
+}
+
 
 ////////////////////////////////////////////////////////////
 sfBool sfImage_saveToFile(const sfImage* image, const char* filename)

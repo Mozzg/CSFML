@@ -144,6 +144,22 @@ CSFML_GRAPHICS_API sfImage* sfImage_copy(const sfImage* image);
 CSFML_GRAPHICS_API void sfImage_destroy(sfImage* image);
 
 ////////////////////////////////////////////////////////////
+/// \brief Load an image from a file on disk
+///
+/// The format of the image is automatically deduced from
+/// the extension. The supported image formats are bmp, png,
+/// tga and jpg. The destination file is overwritten
+/// if it already exists. This function fails if the image is empty.
+///
+/// \param image    Image object
+/// \param filename Path of the file to save
+///
+/// \return sfTrue if loading was successful
+///
+////////////////////////////////////////////////////////////
+CSFML_GRAPHICS_API sfBool sfImage_loadFromFile(sfImage* image, const char* filename);
+
+////////////////////////////////////////////////////////////
 /// \brief Save an image to a file on disk
 ///
 /// The format of the image is automatically deduced from

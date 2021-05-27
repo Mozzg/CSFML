@@ -173,6 +173,11 @@ sfImage* sfTexture_copyToImage(const sfTexture* texture)
     return image;
 }
 
+CSFML_GRAPHICS_API void sfTexture_update(sfTexture * texture, const sfUint8 * pixels)
+{
+	CSFML_CALL_PTR(texture, update(pixels));
+}
+
 
 ////////////////////////////////////////////////////////////
 void sfTexture_updateFromPixels(sfTexture* texture, const sfUint8* pixels, unsigned int width, unsigned int height, unsigned int x, unsigned int y)

@@ -52,6 +52,14 @@ sfRenderTexture* sfRenderTexture_create(unsigned int width, unsigned int height,
     return renderTexture;
 }
 
+////////////////////////////////////////////////////////////
+void sfRenderTexture_recreate(sfRenderTexture* renderTexture, unsigned int width, unsigned int height, sfBool depthBuffer)
+{
+	CSFML_CHECK(renderTexture);
+	renderTexture->This.create(width, height, depthBuffer == sfTrue);
+	renderTexture->DefaultView.This = renderTexture->This.getDefaultView();
+	renderTexture->CurrentView.This = renderTexture->This.getView();
+}
 
 ////////////////////////////////////////////////////////////
 sfRenderTexture* sfRenderTexture_createWithSettings(unsigned int width, unsigned int height, const sfContextSettings* settings)

@@ -56,6 +56,16 @@
 CSFML_GRAPHICS_API sfRenderTexture* sfRenderTexture_create(unsigned int width, unsigned int height, sfBool depthBuffer);
 
 ////////////////////////////////////////////////////////////
+/// \brief Change the dimensions of render texture
+///
+/// \param width       Width of the render texture
+/// \param height      Height of the render texture
+/// \param depthBuffer Do you want a depth-buffer attached? (useful only if you're doing 3D OpenGL on the rendertexture)
+///
+////////////////////////////////////////////////////////////
+CSFML_GRAPHICS_API void sfRenderTexture_recreate(sfRenderTexture* renderTexture, unsigned int width, unsigned int height, sfBool depthBuffer);
+
+////////////////////////////////////////////////////////////
 /// \brief Construct a new render texture
 ///
 /// \param width    Width of the render texture

@@ -134,6 +134,17 @@ CSFML_GRAPHICS_API sfImage* sfTexture_copyToImage(const sfTexture* texture);
 ////////////////////////////////////////////////////////////
 /// \brief Update a texture from an array of pixels
 ///
+/// No additional check is performed on the size of the pixel array, passing invalid arguments will lead to an undefined behavior.
+///
+/// \param texture Texture to update
+/// \param pixels  Array of pixels to copy to the texture
+///
+////////////////////////////////////////////////////////////
+CSFML_GRAPHICS_API void sfTexture_update(sfTexture* texture, const sfUint8* pixels);
+
+////////////////////////////////////////////////////////////
+/// \brief Update a texture from an array of pixels
+///
 /// \param texture Texture to update
 /// \param pixels  Array of pixels to copy to the texture
 /// \param width   Width of the pixel region contained in \a pixels
