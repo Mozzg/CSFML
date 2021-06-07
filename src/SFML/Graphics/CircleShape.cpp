@@ -101,6 +101,14 @@ sfVector2f sfCircleShape_getPosition(const sfCircleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfCircleShape_getPositionP(const sfCircleShape* shape, sfVector2f* retVal)
+{
+	sfVector2f ret = sfCircleShape_getPosition(shape);
+	*retVal = ret;
+}
+
+
+////////////////////////////////////////////////////////////
 float sfCircleShape_getRotation(const sfCircleShape* shape)
 {
     CSFML_CALL_RETURN(shape, getRotation(), 0.f);
@@ -122,6 +130,14 @@ sfVector2f sfCircleShape_getScale(const sfCircleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfCircleShape_getScaleP(const sfCircleShape* shape, sfVector2f* retVal)
+{
+	sfVector2f ret = sfCircleShape_getScale(shape);
+	*retVal = ret;
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfCircleShape_getOrigin(const sfCircleShape* shape)
 {
     sfVector2f origin = {0, 0};
@@ -132,6 +148,14 @@ sfVector2f sfCircleShape_getOrigin(const sfCircleShape* shape)
     origin.y = sfmlOrigin.y;
 
     return origin;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfCircleShape_getOriginP(const sfCircleShape* shape, sfVector2f* retVal)
+{
+	sfVector2f ret = sfCircleShape_getOrigin(shape);
+	*retVal = ret;
 }
 
 
@@ -294,6 +318,14 @@ sfVector2f sfCircleShape_getPoint(const sfCircleShape* shape, size_t index)
     point.y = sfmlPoint.y;
 
     return point;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfCircleShape_getPointP(const sfCircleShape* shape, size_t index, sfVector2f* retVal)
+{
+	sfVector2f ret = sfCircleShape_getPoint(shape, index);
+	*retVal = ret;
 }
 
 
