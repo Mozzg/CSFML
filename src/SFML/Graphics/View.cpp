@@ -71,9 +71,23 @@ void sfView_setCenter(sfView* view, sfVector2f center)
 
 
 ////////////////////////////////////////////////////////////
+void sfView_setCenterP(sfView* view, sfVector2f* center)
+{
+	sfView_setCenter(view, *center);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfView_setSize(sfView* view, sfVector2f size)
 {
     CSFML_CALL(view, setSize(size.x, size.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfView_setSizeP(sfView* view, sfVector2f* size)
+{
+	sfView_setSize(view, *size);
 }
 
 
@@ -113,6 +127,13 @@ sfVector2f sfView_getCenter(const sfView* view)
 
 
 ////////////////////////////////////////////////////////////
+void sfView_getCenterP(const sfView* view, sfVector2f* retVal)
+{
+	*retVal = sfView_getCenter(view);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfView_getSize(const sfView* view)
 {
     sfVector2f size = {0, 0};
@@ -123,6 +144,13 @@ sfVector2f sfView_getSize(const sfView* view)
     size.y = sfmlSize.y;
 
     return size;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfView_getSizeP(const sfView* view, sfVector2f* retVal)
+{
+	*retVal = sfView_getSize(view);
 }
 
 
@@ -153,6 +181,13 @@ sfFloatRect sfView_getViewport(const sfView* view)
 void sfView_move(sfView* view, sfVector2f offset)
 {
     CSFML_CALL(view, move(offset.x, offset.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfView_moveP(sfView* view, sfVector2f* offset)
+{
+	sfView_move(view, *offset);
 }
 
 

@@ -188,6 +188,13 @@ void sfShader_setVec2Uniform(sfShader* shader, const char* name, sfGlslVec2 vect
 
 
 ////////////////////////////////////////////////////////////
+void sfShader_setVec2UniformP(sfShader* shader, const char* name, sfGlslVec2* vector)
+{
+	sfShader_setVec2Uniform(shader, name, *vector);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfShader_setVec3Uniform(sfShader* shader, const char* name, sfGlslVec3 vector)
 {
 	CSFML_CALL(shader, setUniform(name, sf::Glsl::Vec3(vector.x, vector.y, vector.z)));
@@ -383,6 +390,13 @@ void sfShader_setFloat4Parameter(sfShader* shader, const char* name, float x, fl
 void sfShader_setVector2Parameter(sfShader* shader, const char* name, sfVector2f vector)
 {
 	CSFML_CALL(shader, setParameter(name, sf::Vector2f(vector.x, vector.y)));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShader_setVector2ParameterP(sfShader* shader, const char* name, sfVector2f* vector)
+{
+	sfShader_setVector2Parameter(shader, name, *vector);
 }
 
 

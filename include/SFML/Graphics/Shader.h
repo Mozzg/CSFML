@@ -127,6 +127,8 @@ CSFML_GRAPHICS_API void sfShader_setFloatUniform(sfShader* shader, const char* n
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShader_setVec2Uniform(sfShader* shader, const char* name, sfGlslVec2 vector);
 
+CSFML_GRAPHICS_API void sfShader_setVec2UniformP(sfShader* shader, const char* name, sfGlslVec2* vector);
+
 ////////////////////////////////////////////////////////////
 /// \brief Specify value for \p vec3 uniform
 ///
@@ -514,6 +516,8 @@ CSFML_GRAPHICS_API CSFML_DEPRECATED void sfShader_setFloat4Parameter(sfShader* s
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API CSFML_DEPRECATED void sfShader_setVector2Parameter(sfShader* shader, const char* name, sfVector2f vector);
+
+CSFML_GRAPHICS_API CSFML_DEPRECATED void sfShader_setVector2ParameterP(sfShader* shader, const char* name, sfVector2f* vector);
 
 ////////////////////////////////////////////////////////////
 /// \brief Change a 3-components vector parameter of a shader

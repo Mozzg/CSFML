@@ -67,6 +67,13 @@ void sfText_setPosition(sfText* text, sfVector2f position)
 
 
 ////////////////////////////////////////////////////////////
+void sfText_setPositionP(sfText* text, sfVector2f* position)
+{
+	sfText_setPosition(text, *position);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfText_setRotation(sfText* text, float angle)
 {
     CSFML_CALL(text, setRotation(angle));
@@ -81,9 +88,23 @@ void sfText_setScale(sfText* text, sfVector2f scale)
 
 
 ////////////////////////////////////////////////////////////
+void sfText_setScaleP(sfText* text, sfVector2f* scale)
+{
+	sfText_setScale(text, *scale);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfText_setOrigin(sfText* text, sfVector2f origin)
 {
     CSFML_CALL(text, setOrigin(origin.x, origin.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_setOriginP(sfText* text, sfVector2f* origin)
+{
+	sfText_setOrigin(text, *origin);
 }
 
 
@@ -98,6 +119,13 @@ sfVector2f sfText_getPosition(const sfText* text)
     position.y = sfmlPos.y;
 
     return position;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_getPositionP(const sfText* text, sfVector2f* retVal)
+{
+	*retVal = sfText_getPosition(text);
 }
 
 
@@ -123,6 +151,13 @@ sfVector2f sfText_getScale(const sfText* text)
 
 
 ////////////////////////////////////////////////////////////
+void sfText_getScaleP(const sfText* text, sfVector2f* retVal)
+{
+	*retVal = sfText_getScale(text);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfText_getOrigin(const sfText* text)
 {
     sfVector2f origin = {0, 0};
@@ -137,9 +172,23 @@ sfVector2f sfText_getOrigin(const sfText* text)
 
 
 ////////////////////////////////////////////////////////////
+void sfText_getOriginP(const sfText* text, sfVector2f* retVal)
+{
+	*retVal = sfText_getOrigin(text);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfText_move(sfText* text, sfVector2f offset)
 {
     CSFML_CALL(text, move(offset.x, offset.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_moveP(sfText* text, sfVector2f* offset)
+{
+	sfText_move(text, *offset);
 }
 
 
@@ -154,6 +203,13 @@ void sfText_rotate(sfText* text, float angle)
 void sfText_scale(sfText* text, sfVector2f factors)
 {
     CSFML_CALL(text, scale(factors.x, factors.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_scaleP(sfText* text, sfVector2f* factors)
+{
+	sfText_scale(text, *factors);
 }
 
 
@@ -373,6 +429,13 @@ sfVector2f sfText_findCharacterPos(const sfText* text, size_t index)
     position.y = sfmlPos.y;
 
     return position;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_findCharacterPosP(const sfText* text, size_t index, sfVector2f* retVal)
+{
+	*retVal = sfText_findCharacterPos(text, index);
 }
 
 

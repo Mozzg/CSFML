@@ -76,6 +76,8 @@ CSFML_GRAPHICS_API void sfConvexShape_destroy(sfConvexShape* shape);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_setPosition(sfConvexShape* shape, sfVector2f position);
 
+CSFML_GRAPHICS_API void sfConvexShape_setPositionP(sfConvexShape* shape, sfVector2f* position);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the orientation of a convex shape
 ///
@@ -102,6 +104,8 @@ CSFML_GRAPHICS_API void sfConvexShape_setRotation(sfConvexShape* shape, float an
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_setScale(sfConvexShape* shape, sfVector2f scale);
 
+CSFML_GRAPHICS_API void sfConvexShape_setScaleP(sfConvexShape* shape, sfVector2f* scale);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the local origin of a convex shape
 ///
@@ -118,6 +122,8 @@ CSFML_GRAPHICS_API void sfConvexShape_setScale(sfConvexShape* shape, sfVector2f 
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_setOrigin(sfConvexShape* shape, sfVector2f origin);
 
+CSFML_GRAPHICS_API void sfConvexShape_setOriginP(sfConvexShape* shape, sfVector2f* origin);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the position of a convex shape
 ///
@@ -127,6 +133,8 @@ CSFML_GRAPHICS_API void sfConvexShape_setOrigin(sfConvexShape* shape, sfVector2f
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfConvexShape_getPosition(const sfConvexShape* shape);
+
+CSFML_GRAPHICS_API void sfConvexShape_getPositionP(const sfConvexShape* shape, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the orientation of a convex shape
@@ -150,6 +158,8 @@ CSFML_GRAPHICS_API float sfConvexShape_getRotation(const sfConvexShape* shape);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfConvexShape_getScale(const sfConvexShape* shape);
 
+CSFML_GRAPHICS_API void sfConvexShape_getScaleP(const sfConvexShape* shape, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the local origin of a convex shape
 ///
@@ -159,6 +169,8 @@ CSFML_GRAPHICS_API sfVector2f sfConvexShape_getScale(const sfConvexShape* shape)
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfConvexShape_getOrigin(const sfConvexShape* shape);
+
+CSFML_GRAPHICS_API void sfConvexShape_getOriginP(const sfConvexShape* shape, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Move a convex shape by a given offset
@@ -171,6 +183,8 @@ CSFML_GRAPHICS_API sfVector2f sfConvexShape_getOrigin(const sfConvexShape* shape
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_move(sfConvexShape* shape, sfVector2f offset);
+
+CSFML_GRAPHICS_API void sfConvexShape_moveP(sfConvexShape* shape, sfVector2f* offset);
 
 ////////////////////////////////////////////////////////////
 /// \brief Rotate a convex shape
@@ -195,6 +209,8 @@ CSFML_GRAPHICS_API void sfConvexShape_rotate(sfConvexShape* shape, float angle);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_scale(sfConvexShape* shape, sfVector2f factors);
+
+CSFML_GRAPHICS_API void sfConvexShape_scaleP(sfConvexShape* shape, sfVector2f* factors);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the combined transform of a convex shape
@@ -368,6 +384,8 @@ CSFML_GRAPHICS_API size_t sfConvexShape_getPointCount(const sfConvexShape* shape
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfConvexShape_getPoint(const sfConvexShape* shape, size_t index);
 
+CSFML_GRAPHICS_API void sfConvexShape_getPointP(const sfConvexShape* shape, size_t index, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the number of points of a convex shap
 ///
@@ -394,6 +412,8 @@ CSFML_GRAPHICS_API void sfConvexShape_setPointCount(sfConvexShape* shape, size_t
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfConvexShape_setPoint(sfConvexShape* shape, size_t index, sfVector2f point);
+
+CSFML_GRAPHICS_API void sfConvexShape_setPointP(sfConvexShape* shape, size_t index, sfVector2f* point);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the local bounding rectangle of a convex shape

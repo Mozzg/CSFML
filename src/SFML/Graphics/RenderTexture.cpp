@@ -191,6 +191,13 @@ sfVector2f sfRenderTexture_mapPixelToCoords(const sfRenderTexture* renderTexture
 
 
 ////////////////////////////////////////////////////////////
+void sfRenderTexture_mapPixelToCoordsP(const sfRenderTexture* renderTexture, sfVector2i point, const sfView* view, sfVector2f* retVal)
+{
+	*retVal = sfRenderTexture_mapPixelToCoords(renderTexture, point, view);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2i sfRenderTexture_mapCoordsToPixel(const sfRenderTexture* renderTexture, sfVector2f point, const sfView* targetView)
 {
     sfVector2i result = {0, 0};

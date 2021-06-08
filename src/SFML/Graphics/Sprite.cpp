@@ -67,6 +67,13 @@ void sfSprite_setPosition(sfSprite* sprite, sfVector2f position)
 
 
 ////////////////////////////////////////////////////////////
+void sfSprite_setPositionP(sfSprite* sprite, sfVector2f* position)
+{
+	sfSprite_setPosition(sprite, *position);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfSprite_setRotation(sfSprite* sprite, float angle)
 {
     CSFML_CALL(sprite, setRotation(angle));
@@ -81,9 +88,23 @@ void sfSprite_setScale(sfSprite* sprite, sfVector2f scale)
 
 
 ////////////////////////////////////////////////////////////
+void sfSprite_setScaleP(sfSprite* sprite, sfVector2f* scale)
+{
+	sfSprite_setScale(sprite, *scale);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfSprite_setOrigin(sfSprite* sprite, sfVector2f origin)
 {
     CSFML_CALL(sprite, setOrigin(origin.x, origin.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfSprite_setOriginP(sfSprite* sprite, sfVector2f* origin)
+{
+	sfSprite_setOrigin(sprite, *origin);
 }
 
 
@@ -98,6 +119,13 @@ sfVector2f sfSprite_getPosition(const sfSprite* sprite)
     position.y = sfmlPos.y;
 
     return position;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfSprite_getPositionP(const sfSprite* sprite, sfVector2f* retVal)
+{
+	*retVal = sfSprite_getPosition(sprite);
 }
 
 
@@ -123,6 +151,13 @@ sfVector2f sfSprite_getScale(const sfSprite* sprite)
 
 
 ////////////////////////////////////////////////////////////
+void sfSprite_getScaleP(const sfSprite* sprite, sfVector2f* retVal)
+{
+	*retVal = sfSprite_getScale(sprite);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfSprite_getOrigin(const sfSprite* sprite)
 {
     sfVector2f origin = {0, 0};
@@ -137,9 +172,23 @@ sfVector2f sfSprite_getOrigin(const sfSprite* sprite)
 
 
 ////////////////////////////////////////////////////////////
+void sfSprite_getOriginP(const sfSprite* sprite, sfVector2f* retVal)
+{
+	*retVal = sfSprite_getOrigin(sprite);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfSprite_move(sfSprite* sprite, sfVector2f offset)
 {
     CSFML_CALL(sprite, move(offset.x, offset.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfSprite_moveP(sfSprite* sprite, sfVector2f* offset)
+{
+	sfSprite_move(sprite, *offset);
 }
 
 
@@ -154,6 +203,13 @@ void sfSprite_rotate(sfSprite* sprite, float angle)
 void sfSprite_scale(sfSprite* sprite, sfVector2f factors)
 {
     CSFML_CALL(sprite, scale(factors.x, factors.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfSprite_scaleP(sfSprite* sprite, sfVector2f* factors)
+{
+	sfSprite_scale(sprite, *factors);
 }
 
 

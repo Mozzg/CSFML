@@ -114,6 +114,8 @@ CSFML_GRAPHICS_API sfTransform sfTransform_getInverse(const sfTransform* transfo
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfTransform_transformPoint(const sfTransform* transform, sfVector2f point);
 
+CSFML_GRAPHICS_API void sfTransform_transformPointP(const sfTransform* transform, sfVector2f* point, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Apply a transform to a rectangle
 ///

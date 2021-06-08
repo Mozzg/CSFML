@@ -89,6 +89,8 @@ CSFML_GRAPHICS_API void sfText_destroy(sfText* text);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfText_setPosition(sfText* text, sfVector2f position);
 
+CSFML_GRAPHICS_API void sfText_setPositionP(sfText* text, sfVector2f* position);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the orientation of a text
 ///
@@ -115,6 +117,8 @@ CSFML_GRAPHICS_API void sfText_setRotation(sfText* text, float angle);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfText_setScale(sfText* text, sfVector2f scale);
 
+CSFML_GRAPHICS_API void sfText_setScaleP(sfText* text, sfVector2f* scale);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the local origin of a text
 ///
@@ -131,6 +135,8 @@ CSFML_GRAPHICS_API void sfText_setScale(sfText* text, sfVector2f scale);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfText_setOrigin(sfText* text, sfVector2f origin);
 
+CSFML_GRAPHICS_API void sfText_setOriginP(sfText* text, sfVector2f* origin);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the position of a text
 ///
@@ -140,6 +146,8 @@ CSFML_GRAPHICS_API void sfText_setOrigin(sfText* text, sfVector2f origin);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfText_getPosition(const sfText* text);
+
+CSFML_GRAPHICS_API void sfText_getPositionP(const sfText* text, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the orientation of a text
@@ -163,6 +171,8 @@ CSFML_GRAPHICS_API float sfText_getRotation(const sfText* text);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfText_getScale(const sfText* text);
 
+CSFML_GRAPHICS_API void sfText_getScaleP(const sfText* text, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the local origin of a text
 ///
@@ -172,6 +182,8 @@ CSFML_GRAPHICS_API sfVector2f sfText_getScale(const sfText* text);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfText_getOrigin(const sfText* text);
+
+CSFML_GRAPHICS_API void sfText_getOriginP(const sfText* text, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Move a text by a given offset
@@ -184,6 +196,8 @@ CSFML_GRAPHICS_API sfVector2f sfText_getOrigin(const sfText* text);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfText_move(sfText* text, sfVector2f offset);
+
+CSFML_GRAPHICS_API void sfText_moveP(sfText* text, sfVector2f* offset);
 
 ////////////////////////////////////////////////////////////
 /// \brief Rotate a text
@@ -208,6 +222,8 @@ CSFML_GRAPHICS_API void sfText_rotate(sfText* text, float angle);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfText_scale(sfText* text, sfVector2f factors);
+
+CSFML_GRAPHICS_API void sfText_scaleP(sfText* text, sfVector2f* factors);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the combined transform of a text
@@ -517,6 +533,8 @@ CSFML_GRAPHICS_API float sfText_getOutlineThickness(const sfText* text);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfText_findCharacterPos(const sfText* text, size_t index);
+
+CSFML_GRAPHICS_API void sfText_findCharacterPosP(const sfText* text, size_t index, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the local bounding rectangle of a text

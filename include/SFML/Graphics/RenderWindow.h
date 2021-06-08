@@ -423,6 +423,8 @@ CSFML_GRAPHICS_API sfIntRect sfRenderWindow_getViewport(const sfRenderWindow* re
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfRenderWindow_mapPixelToCoords(const sfRenderWindow* renderWindow, sfVector2i point, const sfView* view);
 
+CSFML_GRAPHICS_API void sfRenderWindow_mapPixelToCoordsP(const sfRenderWindow* renderWindow, sfVector2i point, const sfView* view, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Convert a point from world coordinates to window coordinates
 ///

@@ -56,6 +56,13 @@ void sfShape_setPosition(sfShape* shape, sfVector2f position)
 
 
 ////////////////////////////////////////////////////////////
+void sfShape_setPositionP(sfShape* shape, sfVector2f* position)
+{
+	sfShape_setPosition(shape, *position);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfShape_setRotation(sfShape* shape, float angle)
 {
     CSFML_CALL(shape, setRotation(angle));
@@ -70,9 +77,23 @@ void sfShape_setScale(sfShape* shape, sfVector2f scale)
 
 
 ////////////////////////////////////////////////////////////
+void sfShape_setScaleP(sfShape* shape, sfVector2f* scale)
+{
+	sfShape_setScale(shape, *scale);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfShape_setOrigin(sfShape* shape, sfVector2f origin)
 {
     CSFML_CALL(shape, setOrigin(origin.x, origin.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShape_setOriginP(sfShape* shape, sfVector2f* origin)
+{
+	sfShape_setOrigin(shape, *origin);
 }
 
 
@@ -87,6 +108,13 @@ sfVector2f sfShape_getPosition(const sfShape* shape)
     position.y = sfmlPos.y;
 
     return position;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShape_getPositionP(const sfShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfShape_getPosition(shape);
 }
 
 
@@ -112,6 +140,13 @@ sfVector2f sfShape_getScale(const sfShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfShape_getScaleP(const sfShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfShape_getScale(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfShape_getOrigin(const sfShape* shape)
 {
     sfVector2f origin = {0, 0};
@@ -126,9 +161,23 @@ sfVector2f sfShape_getOrigin(const sfShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfShape_getOriginP(const sfShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfShape_getOrigin(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfShape_move(sfShape* shape, sfVector2f offset)
 {
     CSFML_CALL(shape, move(offset.x, offset.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShape_moveP(sfShape* shape, sfVector2f* offset)
+{
+	sfShape_move(shape, *offset);
 }
 
 
@@ -143,6 +192,13 @@ void sfShape_rotate(sfShape* shape, float angle)
 void sfShape_scale(sfShape* shape, sfVector2f factors)
 {
     CSFML_CALL(shape, scale(factors.x, factors.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShape_scaleP(sfShape* shape, sfVector2f* factors)
+{
+	sfShape_scale(shape, *factors);
 }
 
 
@@ -284,6 +340,13 @@ sfVector2f sfShape_getPoint(const sfShape* shape, size_t index)
     point.y = sfmlPoint.y;
 
     return point;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfShape_getPointP(const sfShape* shape, size_t index, sfVector2f* retVal)
+{
+	*retVal = sfShape_getPoint(shape, index);
 }
 
 

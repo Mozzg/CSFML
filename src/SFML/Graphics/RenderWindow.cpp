@@ -416,6 +416,13 @@ sfVector2f sfRenderWindow_mapPixelToCoords(const sfRenderWindow* renderWindow, s
 
 
 ////////////////////////////////////////////////////////////
+void sfRenderWindow_mapPixelToCoordsP(const sfRenderWindow* renderWindow, sfVector2i point, const sfView* view, sfVector2f* retVal)
+{
+	*retVal = sfRenderWindow_mapPixelToCoords(renderWindow, point, view);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2i sfRenderWindow_mapCoordsToPixel(const sfRenderWindow* renderWindow, sfVector2f point, const sfView* targetView)
 {
     sfVector2i result = {0, 0};

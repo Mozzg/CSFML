@@ -75,6 +75,8 @@ CSFML_GRAPHICS_API void sfShape_destroy(sfShape* shape);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShape_setPosition(sfShape* shape, sfVector2f position);
 
+CSFML_GRAPHICS_API void sfShape_setPositionP(sfShape* shape, sfVector2f* position);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the orientation of a shape
 ///
@@ -101,6 +103,8 @@ CSFML_GRAPHICS_API void sfShape_setRotation(sfShape* shape, float angle);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShape_setScale(sfShape* shape, sfVector2f scale);
 
+CSFML_GRAPHICS_API void sfShape_setScaleP(sfShape* shape, sfVector2f* scale);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the local origin of a shape
 ///
@@ -117,6 +121,8 @@ CSFML_GRAPHICS_API void sfShape_setScale(sfShape* shape, sfVector2f scale);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShape_setOrigin(sfShape* shape, sfVector2f origin);
 
+CSFML_GRAPHICS_API void sfShape_setOriginP(sfShape* shape, sfVector2f* origin);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the position of a shape
 ///
@@ -126,6 +132,8 @@ CSFML_GRAPHICS_API void sfShape_setOrigin(sfShape* shape, sfVector2f origin);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfShape_getPosition(const sfShape* shape);
+
+CSFML_GRAPHICS_API void sfShape_getPositionP(const sfShape* shape, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the orientation of a shape
@@ -149,6 +157,8 @@ CSFML_GRAPHICS_API float sfShape_getRotation(const sfShape* shape);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfShape_getScale(const sfShape* shape);
 
+CSFML_GRAPHICS_API void sfShape_getScaleP(const sfShape* shape, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the local origin of a shape
 ///
@@ -158,6 +168,8 @@ CSFML_GRAPHICS_API sfVector2f sfShape_getScale(const sfShape* shape);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfShape_getOrigin(const sfShape* shape);
+
+CSFML_GRAPHICS_API void sfShape_getOriginP(const sfShape* shape, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Move a shape by a given offset
@@ -170,6 +182,8 @@ CSFML_GRAPHICS_API sfVector2f sfShape_getOrigin(const sfShape* shape);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShape_move(sfShape* shape, sfVector2f offset);
+
+CSFML_GRAPHICS_API void sfShape_moveP(sfShape* shape, sfVector2f* offset);
 
 ////////////////////////////////////////////////////////////
 /// \brief Rotate a shape
@@ -194,6 +208,8 @@ CSFML_GRAPHICS_API void sfShape_rotate(sfShape* shape, float angle);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfShape_scale(sfShape* shape, sfVector2f factors);
+
+CSFML_GRAPHICS_API void sfShape_scaleP(sfShape* shape, sfVector2f* factors);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the combined transform of a shape
@@ -366,6 +382,8 @@ CSFML_GRAPHICS_API size_t sfShape_getPointCount(const sfShape* shape);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfShape_getPoint(const sfShape* shape, size_t index);
+
+CSFML_GRAPHICS_API void sfShape_getPointP(const sfShape* shape, size_t index, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the local bounding rectangle of a shape

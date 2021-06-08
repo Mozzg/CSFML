@@ -190,6 +190,8 @@ CSFML_GRAPHICS_API sfIntRect sfRenderTexture_getViewport(const sfRenderTexture* 
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfRenderTexture_mapPixelToCoords(const sfRenderTexture* renderTexture, sfVector2i point, const sfView* view);
 
+CSFML_GRAPHICS_API void sfRenderTexture_mapPixelToCoordsP(const sfRenderTexture* renderTexture, sfVector2i point, const sfView* view, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Convert a point from world coordinates to texture coordinates
 ///

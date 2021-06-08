@@ -63,6 +63,13 @@ void sfRectangleShape_setPosition(sfRectangleShape* shape, sfVector2f position)
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_setPositionP(sfRectangleShape* shape, sfVector2f* position)
+{
+	sfRectangleShape_setPosition(shape, *position);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfRectangleShape_setRotation(sfRectangleShape* shape, float angle)
 {
     CSFML_CALL(shape, setRotation(angle));
@@ -77,9 +84,23 @@ void sfRectangleShape_setScale(sfRectangleShape* shape, sfVector2f scale)
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_setScaleP(sfRectangleShape* shape, sfVector2f* scale)
+{
+	sfRectangleShape_setScale(shape, *scale);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfRectangleShape_setOrigin(sfRectangleShape* shape, sfVector2f origin)
 {
     CSFML_CALL(shape, setOrigin(origin.x, origin.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_setOriginP(sfRectangleShape* shape, sfVector2f* origin)
+{
+	sfRectangleShape_setOrigin(shape, *origin);
 }
 
 
@@ -94,6 +115,13 @@ sfVector2f sfRectangleShape_getPosition(const sfRectangleShape* shape)
     position.y = sfmlPos.y;
 
     return position;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_getPositionP(const sfRectangleShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfRectangleShape_getPosition(shape);
 }
 
 
@@ -119,6 +147,13 @@ sfVector2f sfRectangleShape_getScale(const sfRectangleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_getScaleP(const sfRectangleShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfRectangleShape_getScale(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 sfVector2f sfRectangleShape_getOrigin(const sfRectangleShape* shape)
 {
     sfVector2f origin = {0, 0};
@@ -133,9 +168,23 @@ sfVector2f sfRectangleShape_getOrigin(const sfRectangleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_getOriginP(const sfRectangleShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfRectangleShape_getOrigin(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfRectangleShape_move(sfRectangleShape* shape, sfVector2f offset)
 {
     CSFML_CALL(shape, move(offset.x, offset.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_moveP(sfRectangleShape* shape, sfVector2f* offset)
+{
+	sfRectangleShape_move(shape, *offset);
 }
 
 
@@ -150,6 +199,13 @@ void sfRectangleShape_rotate(sfRectangleShape* shape, float angle)
 void sfRectangleShape_scale(sfRectangleShape* shape, sfVector2f factors)
 {
     CSFML_CALL(shape, scale(factors.x, factors.y));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_scaleP(sfRectangleShape* shape, sfVector2f* factors)
+{
+	sfRectangleShape_scale(shape, *factors);
 }
 
 
@@ -295,9 +351,23 @@ sfVector2f sfRectangleShape_getPoint(const sfRectangleShape* shape, size_t index
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_getPointP(const sfRectangleShape* shape, size_t index, sfVector2f* retVal)
+{
+	*retVal = sfRectangleShape_getPoint(shape, index);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfRectangleShape_setSize(sfRectangleShape* shape, sfVector2f size)
 {
     CSFML_CALL(shape, setSize(sf::Vector2f(size.x, size.y)));
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_setSizeP(sfRectangleShape* shape, sfVector2f* size)
+{
+	sfRectangleShape_setSize(shape, *size);
 }
 
 
@@ -312,6 +382,13 @@ sfVector2f sfRectangleShape_getSize(const sfRectangleShape* shape)
     size.y = sfmlSize.y;
 
     return size;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_getSizeP(const sfRectangleShape* shape, sfVector2f* retVal)
+{
+	*retVal = sfRectangleShape_getSize(shape);
 }
 
 

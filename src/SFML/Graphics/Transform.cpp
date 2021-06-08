@@ -87,6 +87,13 @@ sfVector2f sfTransform_transformPoint(const sfTransform* transform, sfVector2f p
 
 
 ////////////////////////////////////////////////////////////
+void sfTransform_transformPointP(const sfTransform* transform, sfVector2f* point, sfVector2f* retVal)
+{
+	*retVal = sfTransform_transformPoint(transform, *point);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfTransform_transformRect(const sfTransform* transform, sfFloatRect rectangle)
 {
     sfFloatRect rect = {0, 0, 0, 0};

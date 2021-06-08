@@ -81,6 +81,8 @@ CSFML_GRAPHICS_API void sfView_destroy(sfView* view);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfView_setCenter(sfView* view, sfVector2f center);
 
+CSFML_GRAPHICS_API void sfView_setCenterP(sfView* view, sfVector2f* center);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the size of a view
 ///
@@ -89,6 +91,8 @@ CSFML_GRAPHICS_API void sfView_setCenter(sfView* view, sfVector2f center);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfView_setSize(sfView* view, sfVector2f size);
+
+CSFML_GRAPHICS_API void sfView_setSizeP(sfView* view, sfVector2f* size);
 
 ////////////////////////////////////////////////////////////
 /// \brief Set the orientation of a view
@@ -138,6 +142,8 @@ CSFML_GRAPHICS_API void sfView_reset(sfView* view, sfFloatRect rectangle);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfView_getCenter(const sfView* view);
 
+CSFML_GRAPHICS_API void sfView_getCenterP(const sfView* view, sfVector2f* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the size of a view
 ///
@@ -147,6 +153,8 @@ CSFML_GRAPHICS_API sfVector2f sfView_getCenter(const sfView* view);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfVector2f sfView_getSize(const sfView* view);
+
+CSFML_GRAPHICS_API void sfView_getSizeP(const sfView* view, sfVector2f* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the current orientation of a view
@@ -176,6 +184,8 @@ CSFML_GRAPHICS_API sfFloatRect sfView_getViewport(const sfView* view);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfView_move(sfView* view, sfVector2f offset);
+
+CSFML_GRAPHICS_API void sfView_moveP(sfView* view, sfVector2f* offset);
 
 ////////////////////////////////////////////////////////////
 /// \brief Rotate a view relatively to its current orientation

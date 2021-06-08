@@ -76,6 +76,8 @@ CSFML_GRAPHICS_API void sfCircleShape_destroy(sfCircleShape* shape);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfCircleShape_setPosition(sfCircleShape* shape, sfVector2f position);
 
+CSFML_GRAPHICS_API void sfCircleShape_setPositionP(sfCircleShape* shape, sfVector2f* position);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the orientation of a circle shape
 ///
@@ -102,6 +104,8 @@ CSFML_GRAPHICS_API void sfCircleShape_setRotation(sfCircleShape* shape, float an
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfCircleShape_setScale(sfCircleShape* shape, sfVector2f scale);
 
+CSFML_GRAPHICS_API void sfCircleShape_setScaleP(sfCircleShape* shape, sfVector2f* scale);
+
 ////////////////////////////////////////////////////////////
 /// \brief Set the local origin of a circle shape
 ///
@@ -117,6 +121,8 @@ CSFML_GRAPHICS_API void sfCircleShape_setScale(sfCircleShape* shape, sfVector2f 
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfCircleShape_setOrigin(sfCircleShape* shape, sfVector2f origin);
+
+CSFML_GRAPHICS_API void sfCircleShape_setOriginP(sfCircleShape* shape, sfVector2f* origin);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the position of a circle shape
@@ -178,6 +184,8 @@ CSFML_GRAPHICS_API void sfCircleShape_getOriginP(const sfCircleShape* shape, sfV
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfCircleShape_move(sfCircleShape* shape, sfVector2f offset);
 
+CSFML_GRAPHICS_API void sfCircleShape_moveP(sfCircleShape* shape, sfVector2f* offset);
+
 ////////////////////////////////////////////////////////////
 /// \brief Rotate a circle shape
 ///
@@ -201,6 +209,8 @@ CSFML_GRAPHICS_API void sfCircleShape_rotate(sfCircleShape* shape, float angle);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfCircleShape_scale(sfCircleShape* shape, sfVector2f factors);
+
+CSFML_GRAPHICS_API void sfCircleShape_scaleP(sfCircleShape* shape, sfVector2f* factors);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the combined transform of a circle shape
