@@ -401,6 +401,8 @@ CSFML_GRAPHICS_API void sfShape_getPointP(const sfShape* shape, size_t index, sf
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfShape_getLocalBounds(const sfShape* shape);
 
+CSFML_GRAPHICS_API void sfShape_getLocalBoundsP(const sfShape* shape, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a shape
 ///
@@ -416,6 +418,8 @@ CSFML_GRAPHICS_API sfFloatRect sfShape_getLocalBounds(const sfShape* shape);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfShape_getGlobalBounds(const sfShape* shape);
+
+CSFML_GRAPHICS_API void sfShape_getGlobalBoundsP(const sfShape* shape, sfFloatRect* retVal);
 
 ////////////////////////////////////////////////////////////
 /// \brief Recompute the internal geometry of a shape

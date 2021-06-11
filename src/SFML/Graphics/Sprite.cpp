@@ -316,6 +316,13 @@ sfFloatRect sfSprite_getLocalBounds(const sfSprite* sprite)
 
 
 ////////////////////////////////////////////////////////////
+void sfSprite_getLocalBoundsP(const sfSprite* sprite, sfFloatRect* retVal)
+{
+	*retVal = sfSprite_getLocalBounds(sprite);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfSprite_getGlobalBounds(const sfSprite* sprite)
 {
     sfFloatRect rect = {0, 0, 0, 0};
@@ -328,4 +335,11 @@ sfFloatRect sfSprite_getGlobalBounds(const sfSprite* sprite)
     rect.height = sfmlRect.height;
 
     return rect;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfSprite_getGlobalBoundsP(const sfSprite* sprite, sfFloatRect* retVal)
+{
+	*retVal = sfSprite_getGlobalBounds(sprite);
 }

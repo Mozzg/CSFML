@@ -111,6 +111,13 @@ sfFloatRect sfTransform_transformRect(const sfTransform* transform, sfFloatRect 
 
 
 ////////////////////////////////////////////////////////////
+void sfTransform_transformRectP(const sfTransform* transform, sfFloatRect rectangle, sfFloatRect* retVal)
+{
+	*retVal = sfTransform_transformRect(transform, rectangle);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfTransform_combine(sfTransform* transform, const sfTransform* other)
 {
     CSFML_CHECK(transform);

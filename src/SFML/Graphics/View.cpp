@@ -178,6 +178,13 @@ sfFloatRect sfView_getViewport(const sfView* view)
 
 
 ////////////////////////////////////////////////////////////
+void sfView_getViewportP(const sfView* view, sfFloatRect* retVal)
+{
+	*retVal = sfView_getViewport(view);
+}
+
+
+////////////////////////////////////////////////////////////
 void sfView_move(sfView* view, sfVector2f offset)
 {
     CSFML_CALL(view, move(offset.x, offset.y));

@@ -456,6 +456,13 @@ sfFloatRect sfText_getLocalBounds(const sfText* text)
 
 
 ////////////////////////////////////////////////////////////
+void sfText_getLocalBoundsP(const sfText* text, sfFloatRect* retVal)
+{
+	*retVal = sfText_getLocalBounds(text);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfText_getGlobalBounds(const sfText* text)
 {
     sfFloatRect rect = {0, 0, 0, 0};
@@ -468,4 +475,11 @@ sfFloatRect sfText_getGlobalBounds(const sfText* text)
     rect.height = sfmlRect.height;
 
     return rect;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfText_getGlobalBoundsP(const sfText* text, sfFloatRect* retVal)
+{
+	*retVal = sfText_getGlobalBounds(text);
 }

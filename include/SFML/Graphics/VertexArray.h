@@ -164,5 +164,7 @@ CSFML_GRAPHICS_API sfPrimitiveType sfVertexArray_getPrimitiveType(sfVertexArray*
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfVertexArray_getBounds(sfVertexArray* vertexArray);
 
+CSFML_GRAPHICS_API void sfVertexArray_getBoundsP(sfVertexArray* vertexArray, sfFloatRect* retVal);
+
 
 #endif // SFML_VERTEXARRAY_H

@@ -176,6 +176,8 @@ CSFML_GRAPHICS_API float sfView_getRotation(const sfView* view);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfView_getViewport(const sfView* view);
 
+CSFML_GRAPHICS_API void sfView_getViewportP(const sfView* view, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Move a view relatively to its current position
 ///

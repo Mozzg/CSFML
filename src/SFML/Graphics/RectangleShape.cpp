@@ -409,6 +409,13 @@ sfFloatRect sfRectangleShape_getLocalBounds(const sfRectangleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfRectangleShape_getLocalBoundsP(const sfRectangleShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfRectangleShape_getLocalBounds(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfRectangleShape_getGlobalBounds(const sfRectangleShape* shape)
 {
     sfFloatRect rect = {0, 0, 0, 0};
@@ -421,4 +428,11 @@ sfFloatRect sfRectangleShape_getGlobalBounds(const sfRectangleShape* shape)
     rect.height = sfmlRect.height;
 
     return rect;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfRectangleShape_getGlobalBoundsP(const sfRectangleShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfRectangleShape_getGlobalBounds(shape);
 }

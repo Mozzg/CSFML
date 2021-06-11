@@ -133,6 +133,8 @@ CSFML_GRAPHICS_API void sfTransform_transformPointP(const sfTransform* transform
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfTransform_transformRect(const sfTransform* transform, sfFloatRect rectangle);
 
+CSFML_GRAPHICS_API void sfTransform_transformRectP(const sfTransform* transform, sfFloatRect rectangle, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Combine two transforms
 ///

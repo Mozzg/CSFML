@@ -395,6 +395,13 @@ sfFloatRect sfConvexShape_getLocalBounds(const sfConvexShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfConvexShape_getLocalBoundsP(const sfConvexShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfConvexShape_getLocalBounds(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfConvexShape_getGlobalBounds(const sfConvexShape* shape)
 {
     sfFloatRect rect = {0, 0, 0, 0};
@@ -407,4 +414,11 @@ sfFloatRect sfConvexShape_getGlobalBounds(const sfConvexShape* shape)
     rect.height = sfmlRect.height;
 
     return rect;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfConvexShape_getGlobalBoundsP(const sfConvexShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfConvexShape_getGlobalBounds(shape);
 }

@@ -329,6 +329,8 @@ CSFML_GRAPHICS_API sfColor sfSprite_getColor(const sfSprite* sprite);
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfSprite_getLocalBounds(const sfSprite* sprite);
 
+CSFML_GRAPHICS_API void sfSprite_getLocalBoundsP(const sfSprite* sprite, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a sprite
 ///
@@ -344,6 +346,8 @@ CSFML_GRAPHICS_API sfFloatRect sfSprite_getLocalBounds(const sfSprite* sprite);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfSprite_getGlobalBounds(const sfSprite* sprite);
+
+CSFML_GRAPHICS_API void sfSprite_getGlobalBoundsP(const sfSprite* sprite, sfFloatRect* retVal);
 
 
 #endif // SFML_SPRITE_H

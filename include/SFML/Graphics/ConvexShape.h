@@ -431,6 +431,8 @@ CSFML_GRAPHICS_API void sfConvexShape_setPointP(sfConvexShape* shape, size_t ind
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfConvexShape_getLocalBounds(const sfConvexShape* shape);
 
+CSFML_GRAPHICS_API void sfConvexShape_getLocalBoundsP(const sfConvexShape* shape, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a convex shape
 ///
@@ -446,6 +448,8 @@ CSFML_GRAPHICS_API sfFloatRect sfConvexShape_getLocalBounds(const sfConvexShape*
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfConvexShape_getGlobalBounds(const sfConvexShape* shape);
+
+CSFML_GRAPHICS_API void sfConvexShape_getGlobalBoundsP(const sfConvexShape* shape, sfFloatRect* retVal);
 
 
 #endif // SFML_CONVEXSHAPE_H

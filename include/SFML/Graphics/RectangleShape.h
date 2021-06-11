@@ -425,6 +425,8 @@ CSFML_GRAPHICS_API void sfRectangleShape_getSizeP(const sfRectangleShape* shape,
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfRectangleShape_getLocalBounds(const sfRectangleShape* shape);
 
+CSFML_GRAPHICS_API void sfRectangleShape_getLocalBoundsP(const sfRectangleShape* shape, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a rectangle shape
 ///
@@ -440,6 +442,8 @@ CSFML_GRAPHICS_API sfFloatRect sfRectangleShape_getLocalBounds(const sfRectangle
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfRectangleShape_getGlobalBounds(const sfRectangleShape* shape);
+
+CSFML_GRAPHICS_API void sfRectangleShape_getGlobalBoundsP(const sfRectangleShape* shape, sfFloatRect* retVal);
 
 
 #endif // SFML_RECTANGLESHAPE_H

@@ -430,6 +430,8 @@ CSFML_GRAPHICS_API void sfCircleShape_setPointCount(sfCircleShape* shape, size_t
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfCircleShape_getLocalBounds(const sfCircleShape* shape);
 
+CSFML_GRAPHICS_API void sfCircleShape_getLocalBoundsP(const sfCircleShape* shape, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a circle shape
 ///
@@ -445,6 +447,8 @@ CSFML_GRAPHICS_API sfFloatRect sfCircleShape_getLocalBounds(const sfCircleShape*
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfCircleShape_getGlobalBounds(const sfCircleShape* shape);
+
+CSFML_GRAPHICS_API void sfCircleShape_getGlobalBoundsP(const sfCircleShape* shape, sfFloatRect* retVal);
 
 
 #endif // SFML_CIRCLESHAPE_H

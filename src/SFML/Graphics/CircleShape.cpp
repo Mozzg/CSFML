@@ -398,6 +398,13 @@ sfFloatRect sfCircleShape_getLocalBounds(const sfCircleShape* shape)
 
 
 ////////////////////////////////////////////////////////////
+void sfCircleShape_getLocalBoundsP(const sfCircleShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfCircleShape_getLocalBounds(shape);
+}
+
+
+////////////////////////////////////////////////////////////
 sfFloatRect sfCircleShape_getGlobalBounds(const sfCircleShape* shape)
 {
     sfFloatRect rect = {0, 0, 0, 0};
@@ -410,4 +417,11 @@ sfFloatRect sfCircleShape_getGlobalBounds(const sfCircleShape* shape)
     rect.height = sfmlRect.height;
 
     return rect;
+}
+
+
+////////////////////////////////////////////////////////////
+void sfCircleShape_getGlobalBoundsP(const sfCircleShape* shape, sfFloatRect* retVal)
+{
+	*retVal = sfCircleShape_getGlobalBounds(shape);
 }

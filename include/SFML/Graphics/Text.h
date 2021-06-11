@@ -552,6 +552,8 @@ CSFML_GRAPHICS_API void sfText_findCharacterPosP(const sfText* text, size_t inde
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfText_getLocalBounds(const sfText* text);
 
+CSFML_GRAPHICS_API void sfText_getLocalBoundsP(const sfText* text, sfFloatRect* retVal);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the global bounding rectangle of a text
 ///
@@ -567,6 +569,8 @@ CSFML_GRAPHICS_API sfFloatRect sfText_getLocalBounds(const sfText* text);
 ///
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API sfFloatRect sfText_getGlobalBounds(const sfText* text);
+
+CSFML_GRAPHICS_API void sfText_getGlobalBoundsP(const sfText* text, sfFloatRect* retVal);
 
 
 #endif // SFML_TEXT_H

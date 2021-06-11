@@ -121,3 +121,10 @@ sfFloatRect sfVertexArray_getBounds(sfVertexArray* vertexArray)
 
     return rect;
 }
+
+
+////////////////////////////////////////////////////////////
+void sfVertexArray_getBoundsP(sfVertexArray* vertexArray, sfFloatRect* retVal)
+{
+	*retVal = sfVertexArray_getBounds(vertexArray);
+}
