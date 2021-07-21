@@ -16,7 +16,7 @@ if (-not $RID) {
     exit
 }
 
-$Generator = 'Visual Studio 15 2017'
+$Generator = 'Visual Studio 16 2019'
 
 switch ($RID) {
     'win-x86' { 
@@ -35,7 +35,7 @@ Write-Output "Building $RID"
 Write-Output "Using $Generator as the cmake generator"
 Write-Output "Using architecture $Architecture"
 
-$SFMLBranch = "2.5.x" # The branch or tag of the SFML repository to be cloned
+$SFMLBranch = "2.5.1" # The branch or tag of the SFML repository to be cloned
 $CSFMLDir = (Get-Item (git rev-parse --show-toplevel)).FullName # The directory of the source code of CSFML
 
 $OutDir = "./CSFML/runtimes/$RID/native" # The directory of all CSFML modules, used to copy the final dlls
@@ -194,10 +194,10 @@ function Copy-Module($module) {
     Copy-Item "$CSFMLLibDir/csfml-$module-2.dll" "$OutDir/csfml-$module.dll" -Force > $null
 }
 
-Copy-Module 'Audio'
-Copy-Module 'Graphics'
-Copy-Module 'System'
-Copy-Module 'Window'
+Copy-Module 'audio'
+Copy-Module 'graphics'
+Copy-Module 'system'
+Copy-Module 'window'
 
 Write-Output "Copying Audio module extra files"
 Copy-Item "$SFMLAudioExtras/*" "$OutDir"
